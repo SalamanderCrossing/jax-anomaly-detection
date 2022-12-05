@@ -1,0 +1,1 @@
+{"command": "train", "checkpoint_path": "results/set_anomaly/checkpoints", "save_dir": "results/set_anomaly", "default_checkpoint_location": "results/set_anomaly/checkpoints/checkpoint.ckpt"}
