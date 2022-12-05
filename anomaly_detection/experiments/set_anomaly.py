@@ -25,3 +25,12 @@ if mate.is_train:
         seed=0,
         checkpoint_path=mate.default_checkpoint_location,
     )
+    mate.result({"val_acc": val_acc})
+else:
+    test_acc = AnomalyTrainer.test(
+        model=model,
+        anom_test_loader=test_loader,
+        checkpoint_path=mate.default_checkpoint_location,
+        seed=0,
+    )
+    mate.result({"test_acc": test_acc})
