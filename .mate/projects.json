@@ -1,0 +1,46 @@
+{
+    "anomaly_detection": {
+        "name": "anomaly_detection",
+        "project": {
+            "models": {
+                "transformer": {
+                    "name": "transformer",
+                    "exports": [
+                        "TransformerPredictor"
+                    ],
+                    "errors": []
+                }
+            },
+            "data_loaders": {
+                "set_anomaly": {
+                    "name": "set_anomaly",
+                    "exports": [
+                        "get_loaders"
+                    ],
+                    "errors": []
+                }
+            },
+            "trainers": {
+                "anomaly_trainer": {
+                    "name": "anomaly_trainer",
+                    "exports": [
+                        "ReverseTrainer",
+                        "AnomalyTrainer"
+                    ],
+                    "errors": []
+                }
+            },
+            "experiments": {
+                "set_anomaly": {
+                    "name": "set_anomaly",
+                    "errors": [],
+                    "imports": [
+                        "models",
+                        "data_loaders",
+                        "trainers"
+                    ]
+                }
+            }
+        }
+    }
+}
